@@ -1,4 +1,4 @@
-const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
+const { warmStrategyCache } = require('workbox-recipes');
 const { CacheFirst } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
@@ -30,7 +30,7 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 registerRoute(
   ({ request }) => request.destination === 'image',
   new CacheFirst({
-    cacheName: 'my-image-cache',
+    cacheName: 'my-pwa-cache',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],

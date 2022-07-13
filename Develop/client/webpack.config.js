@@ -8,11 +8,10 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = () => {
   return {
-    mode: 'production',
+    mode: 'develpment',
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      editor: './src/js/editor.js'
 
     },
     output: {
@@ -22,6 +21,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
+        favicon: "./favicon.ico"
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
