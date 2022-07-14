@@ -33,7 +33,7 @@ module.exports = () => {
         name: 'Text Editor',
         short_name: 'Editor',
         description: 'In browser Text editor!',
-        background_color: '#225ca3',
+        background_color: '#c34126',
         theme_color: '#225ca3',
         start_url: '/',
         publicPath: '/',
